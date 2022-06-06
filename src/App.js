@@ -1,7 +1,7 @@
 import { AddColor } from "./AddColor";
 import "./App.css"
-import { Movie } from "./Movie";
-import {useState} from "react"
+import { useState } from "react"
+import { MovieList } from "./MovieList";
 
 
 function App() {
@@ -155,74 +155,15 @@ function App() {
       summary: "Peter Jackson's expansive remake of the 1933 classic follows director Carl Denham (Jack Black) and his crew on a journey from New York City to the ominous Skull Island to film a new movie. Accompanying him are playwright Jack Driscoll (Adrien Brody) and actress Ann Darrow (Naomi Watts), who is whisked away by the monstrous ape, Kong, after they reach the island. The crew encounters dinosaurs and other creatures as they race to rescue Ann, while the actress forms a bond with her simian captor."
     }
   ]
-  const[movieList,setMovieList]=useState(initial);
+  const [movieList, setMovieList] = useState(initial);
   return (
     <div className="App">
-      {/* <div className="Movie-list">
-      {moviedetails.map((nm, index) => (
-        <Movie key={index} name={nm.moviename} pic={nm.pic} summary={nm.summary} rating={nm.rating} />
-      ))}
+      <MovieList moviedetails={movieList} setMovieList={setMovieList} />
 
-
-
-      
-
-    </div> */}
-    <MovieList moviedetails={movieList} setMovieList ={setMovieList}/>
-    
     </div>
   );
 }
 
 export default App;
 
-function MovieList({moviedetails,setMovieList}){
-  const[moviename,setMoviename]=useState(" ");
-  
-  const[rating,setRating]=useState("  ");
-  const[pic,setPic]=useState(" ");
-  const[summary,setSummary]=useState("");
-  return(
-    <div>
-    <div className="add-movie-form">
-      <input placeholder="Movie Name" 
-      onChange={(event)=>setMoviename(event.target.value)}/>
-      <input placeholder="Rating"
-      onChange={(event)=>setRating(event.target.value)}/>
-      <input placeholder="Pic" 
-      onChange={(event)=>setPic(event.target.value)}/>
-      <input placeholder="Summary"
-      onChange={(event)=>setSummary(event.target.value)}/>
-     
-      <button onClick={()=>{
-        const newMovie={
-          moviename:moviename,
-        rating:rating,
-        pic:pic,
-        summary:summary,
-      }
-    setMovieList([...moviedetails,newMovie])
-    }}
-    
-    
-      >Add Movie
-      </button>
-      
-      </div> 
-      
-    <div className="Movie-list">
-       {moviedetails.map((nm, index) => (
-        <Movie key={index} name={nm.moviename} pic={nm.pic} summary={nm.summary} rating={nm.rating} />
-      ))} 
-      
-</div>
-</div>
 
-
-      
-
-   
-  )
-    
-  
-}
