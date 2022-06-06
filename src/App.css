@@ -1,6 +1,4 @@
-body{
-  background-color:rgb(40, 35, 39)
-}
+
 
 .App {
   text-align: center;
@@ -8,13 +6,22 @@ body{
   flex-flow:wrap;
   justify-content: center;
   
+  
+}
+.Movie-list{
+  text-align: center;
+  display:flex;
+  flex-flow:wrap;
+  justify-content: center;
 }
 
 h1{
+  padding-top: 2%;
   font-size: medium;
   transform: scaleX(140%);
   transform: scaleY(140%);
-  color:whitesmoke
+  
+  
 }
 img{
   
@@ -33,15 +40,17 @@ img{
 }
 .summary{
   padding-left: 3%;
-  padding-right: 3%;
-  font: autoresize;
   inline-size: 300px;
   overflow-wrap: break-word;
   color:rgba(147, 144, 149, 0.97);
   
+  
+  
+  
+  
 }
 span{
-  font-size: 10px;
+  font-size: 15px;
 }
 
 img:hover{
@@ -49,7 +58,20 @@ img:hover{
 }
 
 
-P{
-  padding-right: 50%;
-  color:rgb(189, 160, 107)
+
+.likebutton,.dislikebutton{
+  font-size:15px;
+  width: 20%;
+  height: 25px;
+  margin-top: 5%;
+  margin-left: 3%;
+
+}
+
+.add-movie-form{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 24px;
+  
 }
