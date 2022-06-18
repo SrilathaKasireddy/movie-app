@@ -3,7 +3,7 @@ export function ColorBox({ color }) {
   backgroundColor: color,
   height: "25px",
   width: "250px",
-  marginTop: "25px",
+  
  };
 
  return <div style={styles}></div>;

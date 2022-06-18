@@ -1,12 +1,17 @@
 import { useState } from "react";
 import { ColorBox } from "./ColorBox";
 
+
 export function AddColor() {
  const [color, setColor] = useState("blue");
 
  const styl = {
   backgroundColor: color,
-  marginTop: "10%"
+ marginTop:20,
+ textAlign:"center",
+ alignItems:"center",
+ justifyContent:"center"
+
  };
  // const colourList =
  const [colourList, setColorList] = useState([

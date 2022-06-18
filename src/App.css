@@ -1,5 +1,3 @@
-
-
 .App {
   text-align: center;
   display:flex;
@@ -74,4 +72,42 @@ img:hover{
   gap: 10px;
   padding: 24px;
   
+}
+
+
+
+.game-box{
+ 
+  height: 160px;
+  width: 160px;
+  background:   white;
+  color: black;
+  font-size: 160px;
+  display: flex;
+  align-items:center;
+  justify-content: center;
+
+
+
+}
+
+
+
+
+
+
+.notfound{
+  height: 500px;
+  width: 700px;
+ 
+  
+}
+
+.board{
+  background-color:"orange";
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+
+  cursor:pointer;
+  max-width:800px
 }
